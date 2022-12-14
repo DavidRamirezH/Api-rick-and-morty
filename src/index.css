@@ -231,6 +231,7 @@ h1 span{
   top: 0;
   overflow: scroll;
   text-align: center;
+  padding-bottom:150px;
 }
 .episodios h2{
   margin-top: 20px;
