@@ -4,7 +4,6 @@ function Header(){
         <div><h1>Rick and Morty <span>(Characters)</span></h1></div>
         <div className="nav">
             <a href="/index.html">Home</a>
-            <a href="#">Filter</a>
         </div>
     </header>
 }

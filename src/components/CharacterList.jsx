@@ -7,7 +7,7 @@ function CharacterList(){
 
     const [characters, setCharacter]=useState([]);
     const [loading, setLoading]=useState(true);
-    const [page, setPage] =useState (1);
+    const [page, setPage]=useState(1);
 
     useEffect(()=>{
       async function datosfetch(){
@@ -17,7 +17,7 @@ function CharacterList(){
         setCharacter(data.results)
       }
       datosfetch();
-    }, [page])
+    },[page])
 
     return <div>
           {

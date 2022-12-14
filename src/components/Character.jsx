@@ -15,10 +15,11 @@ function Character({character}){
                 </div>  
             </div>
             <div className="informacionM">
-                <div>
+                <div>                    
                     <span className="foto_modal"></span>
                     <h2 className="name_modal"></h2>
                     <ul className="informacion">
+                    <h2>INFORMACION DEL PERSONAJE</h2>
                         <li>
                            <p className="elemento1"></p> 
                         </li>
@@ -36,7 +37,6 @@ function Character({character}){
                         </li>
                     </ul>
                     <ul className="episodios">
-                   
                     </ul>
                 </div>
                     <button className="cerrar_modal" onClick={moverModal}>Volver</button>
@@ -54,20 +54,33 @@ function Character({character}){
         const elementoCuatro= document.querySelector('.elemento4')
         const elementoCinco= document.querySelector('.elemento5')
         const episodios= document.querySelector('.episodios')
+        const cap = (character.episode)
+
+
 
             modal.classList.toggle('mover')
             nombreModal.innerHTML=(character.name)
             fotoModal.innerHTML=(`<img src=${url} alt={character.name}/>`)
-            elementoUno.innerHTML=(character.status)
-            elementoDos.innerHTML=(character.species)
-            elementoTres.innerHTML=(character.gender)
-            elementoCuatro.innerHTML=(character.origin.name)
-            elementoCinco.innerHTML=(character.location.name)
+            elementoUno.innerHTML=("- estado: "+ character.status) 
+            elementoDos.innerHTML=("- especie: "+ character.species)
+            elementoTres.innerHTML=("- Genero: "+character.gender)
+            elementoCuatro.innerHTML=("-Origen: "+character.origin.name)
+            elementoCinco.innerHTML=("-Localizacion: "+character.location.name)       
             
-            character.episode.map((cap)=>{
-                return episodios.innerHTML=(cap+'<br/>')
-            })
+            let capitulosC=""
+            for (const key in cap) {
+                if (Object.hasOwnProperty.call(cap, key)) {
+                    const element = cap[key];
+                    var arreglo=element.split("/")
+                    const conteo=(arreglo.length-1)
+                    capitulosC += `<li className="capClick">Capitulo${arreglo[conteo]}</li>`
+                    
+                    
+                }
+            }
+            episodios.innerHTML=('<h2>Participación de capítulos</h2>'+capitulosC)
             
+        }   
 }
-}
+
 export default Character;

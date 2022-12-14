@@ -4,7 +4,7 @@ function NavPage(props){
             <p>Page {props.page}</p>
             <button className="boton_page" onClick={()=>{
                 if(props.page == 1){
-                    props.setPage(props.page )
+                    props.setPage(props.page)
                 }
                 else{
                     props.setPage(props.page -1)
