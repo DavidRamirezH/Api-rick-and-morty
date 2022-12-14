@@ -9,7 +9,7 @@
   --negro:rgb(18, 18, 18);
   --blanco:#fff;
   --gradient:linear-gradient(45deg, rgb(13, 41, 69),rgb(18, 181, 67) );
-  --opacidad:rgba(0, 0, 0, 0.637);
+  --opacidad:rgba(0, 0, 0, 0.785);
   --azul:rgb(13, 41, 69);
   --azulO:rgba(13, 41, 69, 0.777);
   --blancoO:rgba(255, 255, 255, 0.806);
@@ -259,7 +259,7 @@ h1 span{
   transition: 0.4s;
 }
 .informacionM{
-  background-color: var(--azul);
+  background-color: var(--opacidad);
   width: 100%;
   height: 100vh;
   position: fixed;
