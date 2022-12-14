@@ -54,18 +54,16 @@ function Character({character}){
         const elementoCuatro= document.querySelector('.elemento4')
         const elementoCinco= document.querySelector('.elemento5')
         const episodios= document.querySelector('.episodios')
-        const cap = (character.episode)
+        const cap = (character.episode);
 
-
-
-            modal.classList.toggle('mover')
-            nombreModal.innerHTML=(character.name)
-            fotoModal.innerHTML=(`<img src=${url} alt={character.name}/>`)
-            elementoUno.innerHTML=("- estado: "+ character.status) 
-            elementoDos.innerHTML=("- especie: "+ character.species)
-            elementoTres.innerHTML=("- Genero: "+character.gender)
-            elementoCuatro.innerHTML=("-Origen: "+character.origin.name)
-            elementoCinco.innerHTML=("-Localizacion: "+character.location.name)       
+        modal.classList.toggle('mover')
+        nombreModal.innerHTML=(character.name)
+        fotoModal.innerHTML=(`<img src=${url} alt={character.name}/>`)
+        elementoUno.innerHTML=("- Estado: "+ character.status) 
+        elementoDos.innerHTML=("- Especie: "+ character.species)
+        elementoTres.innerHTML=("- Genero: "+character.gender)
+        elementoCuatro.innerHTML=("-Origen: "+character.origin.name)
+        elementoCinco.innerHTML=("-Localizacion: "+character.location.name)       
             
             let capitulosC=""
             for (const key in cap) {
@@ -74,8 +72,6 @@ function Character({character}){
                     var arreglo=element.split("/")
                     const conteo=(arreglo.length-1)
                     capitulosC += `<li className="capClick">Capitulo${arreglo[conteo]}</li>`
-                    
-                    
                 }
             }
             episodios.innerHTML=('<h2>Participación de capítulos</h2>'+capitulosC)
